@@ -4,60 +4,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OmniMob</title>
-    <link rel="stylesheet" href="utils.css">
+    <title>OmniMob | Digital Reality Studio</title>
+    <meta name="description" content="OmniMob blends strategy, design, and engineering.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-    <div id="container">
-        <nav id="nav" class="flex">
-            <div class="flex">
-                <div id="logo">OM</div>
-                <div class="navbar flex">
-                    <a href="#">Product</a>
-                    <a href="#">Discover</a>
-                    <a href="#">Help</a>
-                </div>
-            </div>
-            <div class="connect">
-                <div class="connect-btn btn">Connect</div>
-            </div>
-        </nav>
-        <header class="flex">
-            <div class="header-content flex">
-                <h1>OmniMob</h1>
-                <h2>(Creative Freedom)</h2>
-                <p>All the design and photo editing tools you need in one app – for free. Download Affinity now on macOS
-                    or Windows.</p>
-                <div class="btn signup-btn">Signup to Download</div>
-            </div>
-        </header>
-        <main class="flex">
-            <section class="flex images" id="images">
-                <div class="images-container flex">
-                    <img src="./assets/img1.png" class="secondary" alt="">
-                    <img src="./assets/img2.png" class="primary" alt="">
-                    <img src="./assets/img3.png" class="main" alt="">
-                    <img src="./assets/img4.png" class="primary" alt="">
-                    <img src="./assets/img5.png" class="secondary" alt="">
-                </div>
-            </section>
-            <section class="flex about">
-                <div class="about-container">
-                    <h1>An app that adapts to you, not the other way around</h1>
-                    <p>Affinity comes with built-in Vector, Pixel, and Layout studios, but you’re not locked in.
-                        Rearrange
-                        panels and mix and match your favorite tools to build custom studios. You can save multiple
-                        setups,
-                        switch between them in a click, and even share with others or download theirs. It’s
-                        customization
-                        that flexes to your workflow.</p>
-                </div>
-            </section>
-        </main>
-    </div>
-    <script src="script.js"></script>
-</body>
+    <div class="noise"></div>
 
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-circle"><span class="cursor-text"></span></div>
+
+    <header>
+        <a href="#" class="logo magnet-trigger"><span class="magnet-target">OMNIMOB</span></a>
+        <nav>
+            <a href="#work" class="nav-link magnet-trigger"><span class="magnet-target">Work</span></a>
+            <a href="#studio" class="nav-link magnet-trigger"><span class="magnet-target">Studio</span></a>
+            <a href="#contact" class="nav-link magnet-trigger"><span class="magnet-target">Contact</span></a>
+        </nav>
+    </header>
+
+    <div class="main-wrapper" id="main-content">
+        
+        <section class="hero container">
+            <h1 id="hero-title">
+                Digital<br>
+                Reality<br>
+                <span style="color: var(--accent);">Architects.</span>
+            </h1>
+            <div class="hero-sub">
+                <p class="reveal-text">We engineer digital products that defy expectations. Strategy, Design, and Development for the bold.</p>
+                <span class="scroll-down">Scroll to Explore</span>
+            </div>
+        </section>
+
+        <section class="marquee-section">
+            <div class="marquee-track">
+                <div class="marquee-item">Strategy <span></span> Design <span></span> Engineering <span></span> Growth <span></span></div>
+                <div class="marquee-item">Strategy <span></span> Design <span></span> Engineering <span></span> Growth <span></span></div>
+            </div>
+        </section>
+
+        <!-- NEW VERTICAL WORK SECTION -->
+        <section id="work" class="work-section container">
+            <div class="section-header">
+                <h2 class="section-title">Selected Works</h2>
+                <span class="section-count">(04)</span>
+            </div>
+
+            <div class="project-list">
+                
+                <!-- Project 01 -->
+                <article class="project-card">
+                    <div class="project-image-wrapper hover-reveal" data-text="VIEW">
+                        <img src="https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=1200&auto=format&fit=crop" class="project-img" alt="Neon Fintech">
+                    </div>
+                    <div class="project-details">
+                        <span class="p-cat">App Development</span>
+                        <h3 class="p-title">Neon Fintech</h3>
+                        <p class="p-desc">A next-generation banking interface designed for the crypto-native generation. Featuring real-time visualization and biometric security.</p>
+                        <a href="#" class="p-link">View Case Study <i data-lucide="arrow-right" style="width: 16px;"></i></a>
+                    </div>
+                </article>
+
+                <!-- Project 02 -->
+                <article class="project-card">
+                    <div class="project-image-wrapper hover-reveal" data-text="VIEW">
+                        <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=1200&auto=format&fit=crop" class="project-img" alt="Velvet Interiors">
+                    </div>
+                    <div class="project-details">
+                        <span class="p-cat">3D Experience</span>
+                        <h3 class="p-title">Velvet Interiors</h3>
+                        <p class="p-desc">An immersive WebGL showroom experience allowing users to customize luxury furniture in a photorealistic 3D environment.</p>
+                        <a href="#" class="p-link">View Case Study <i data-lucide="arrow-right" style="width: 16px;"></i></a>
+                    </div>
+                </article>
+
+                <!-- Project 03 -->
+                <article class="project-card">
+                    <div class="project-image-wrapper hover-reveal" data-text="VIEW">
+                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200&auto=format&fit=crop" class="project-img" alt="Cyber Wear">
+                    </div>
+                    <div class="project-details">
+                        <span class="p-cat">Headless Commerce</span>
+                        <h3 class="p-title">Cyber Wear</h3>
+                        <p class="p-desc">A high-performance headless e-commerce build for a streetwear brand, focusing on speed, micro-interactions, and conversion.</p>
+                        <a href="#" class="p-link">View Case Study <i data-lucide="arrow-right" style="width: 16px;"></i></a>
+                    </div>
+                </article>
+
+                <!-- Project 04 -->
+                <article class="project-card">
+                    <div class="project-image-wrapper hover-reveal" data-text="VIEW">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop" class="project-img" alt="Orbital Data">
+                    </div>
+                    <div class="project-details">
+                        <span class="p-cat">Dashboard UI</span>
+                        <h3 class="p-title">Orbital Data</h3>
+                        <p class="p-desc">Complex data visualization for a satellite analytics platform. transforming millions of data points into actionable insights.</p>
+                        <a href="#" class="p-link">View Case Study <i data-lucide="arrow-right" style="width: 16px;"></i></a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="studio" class="services container">
+            <div class="section-header" style="margin-bottom: 2rem;">
+                <h2 class="section-title">Capabilities</h2>
+            </div>
+            
+            <div class="service-row hover-reveal" data-text="EXPAND">
+                <span style="color: var(--accent);">01/</span>
+                <div>
+                    <h3 class="s-title">Art Direction</h3>
+                    <p class="s-desc">Visual storytelling that captures the essence of your brand.</p>
+                </div>
+                <i data-lucide="arrow-right" class="s-icon"></i>
+            </div>
+            <div class="service-row hover-reveal" data-text="EXPAND">
+                <span style="color: var(--accent);">02/</span>
+                <div>
+                    <h3 class="s-title">Development</h3>
+                    <p class="s-desc">Creative coding, WebGL, and robust backend architectures.</p>
+                </div>
+                <i data-lucide="arrow-right" class="s-icon"></i>
+            </div>
+            <div class="service-row hover-reveal" data-text="EXPAND">
+                <span style="color: var(--accent);">03/</span>
+                <div>
+                    <h3 class="s-title">Interaction</h3>
+                    <p class="s-desc">Micro-interactions and animations that delight users.</p>
+                </div>
+                <i data-lucide="arrow-right" class="s-icon"></i>
+            </div>
+        </section>
+        
+        <div style="height: 10vh;"></div>
+    </div>
+
+    <footer id="contact" class="footer-sticky">
+        <h2 class="footer-big">Let's Talk</h2>
+        <a href="mailto:hello@omnimob.in" class="cta-btn hover-reveal" data-text="EMAIL">Start Project</a>
+        <div class="footer-links">
+            <a href="#">Insta</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
 </html>
