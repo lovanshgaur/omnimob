@@ -1,0 +1,145 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    color: inherit;
+    text-decoration: none;   
+      font-style: normal;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    font-size: 100%;
+}
+body{
+    background: var(--background);
+    color: var(--color);
+    font-family: var(--para);
+    overflow-x: hidden;
+}
+#container{
+    width: 100%;
+    height: 100%;
+}
+
+/* nav css */
+#nav{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    padding: 1rem 2rem;
+    justify-content: space-between ;
+    background: var(--background);
+}
+.navbar{
+    height: 100%;
+    padding: 0rem 2rem;
+    gap: 0.75rem;
+    font-size: 1.25rem;
+}
+.connect{
+    height: 100%;
+}
+#logo{
+    font-family: var(--heading);
+    font-size: 2rem;
+    background: var(--tone-1);
+    color: var(--background);
+    padding: 0.15rem 0.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+
+/* header css */
+
+header{
+    width: 100%;
+    height: 90vh;
+}
+.header-content{
+    margin-top: 10vh;
+    width: 80%;
+    height: 60%;
+    flex-direction: column;
+}
+.header-content h1{
+    font-size: 12rem;
+    letter-spacing: 4px;
+    font-weight: 400;
+    position: relative;
+}
+.header-content h1::after{
+    /* content: "WORLD"; */
+    position: absolute;
+    top: 50%;
+    right: -20%;
+    padding: 0.75rem 1rem;
+    transform: translateY(-50%) rotate(-90deg);
+    background: var(--tone-1);
+    color: var(--background);
+    font-size: 3rem;
+    text-rendering: geometricPrecision;
+
+}
+.header-content h2{
+    line-height: 1.25;
+    font-size: 3rem;
+}
+.header-content p{
+    width: 80%;
+    text-align: center;
+    margin: 2rem 0rem;
+    font-size: 1rem;
+}
+
+/* main css */
+
+main{
+    width: 100%;
+    flex-direction: column;
+    padding: 0rem 2rem;
+}
+section{
+    width: 100%;
+    height: 100vh;
+}
+.images{
+    align-items: flex-start;
+}
+.images-container{
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    height: 80vh;
+    gap: 1rem;
+
+}
+.images img{
+    height: 100%;
+    aspect-ratio: 3/4;
+}
+.images .primary{
+    height: 70%;
+}
+.images .secondary{
+    height: 45%;
+}
+.about{
+    height: 60vh;
+}
+.about-container{
+    width: 80%;
+    height: 80%;
+    text-align: center;
+}
+.about h1{
+    line-height: 1;
+    font-size: 5rem;
+}
+.about p{
+    font-weight: 400;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+}
